@@ -1,4 +1,4 @@
-rootProject.name = "gradle-multi-module-project-template"
+rootProject.name = "BDSPackManager"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {
@@ -15,4 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-//include(":")
+include(":core")
+include(":app")
+include(":site")
