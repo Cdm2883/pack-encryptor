@@ -6,7 +6,10 @@ val buildCoreTask = project(":" + projects.core.name)
     .tasks
     .named("jsBrowserProductionLibraryDistribution")
 
+tasks.named("npmInstall") {
+    dependsOn(buildCoreTask)
+}
 tasks.register("build") {
     group = "npm"
-    dependsOn(buildCoreTask, "npm_run_build")
+    dependsOn("npm_run_build")
 }
